@@ -74,4 +74,25 @@ function addEmployee() {
             ],
             name: "addingEmployee"
         }])
-        
+        .then(function({roleInfo, addingEmployee}) {
+            let newEmployee;
+            if (role === "Engineer") {
+                newEmployee = new Engineer(name, id, email, roleInfo);
+            } else if (role === "Intern") {
+                newEmployee = new Intern(name, id, email, roleInfo);
+            } else {
+                newEmployee = new Manager(name, id, email, roleInfo);
+            }
+            employee.push(newEmployee);
+            addHtml(newEmployee)
+            .then(function() {
+                if (addingEmployee === "yes") {
+                    addEmployee();
+                } else {
+                    finalHTML();
+                }
+            });
+            
+        });
+    });
+}
