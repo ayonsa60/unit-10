@@ -1,0 +1,17 @@
+{
+    "name": "unit-10",
+    "version": "1.0.0",
+    "description": "OOP and testing for week 10 homework",
+    "main": "app.js",
+    "directories": {
+    "lib": "lib",
+    "test": "test"
+    },
+    "scripts": {
+    "test": "jest --verbose test/*"
+    },
+
+    "devDependencies": {
+    "jest": "^24.8.0"
+    }
+}
