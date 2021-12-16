@@ -15,3 +15,41 @@
 // THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 // WHEN I decide to finish building my team
 // THEN I exit the application, and the HTML is generated
+
+const inquirer = require("inquirer");
+const fs = require("fs");
+const Engineer = require("./Develop/lib/Engineer.js");
+const Intern = require("./Develop/lib/Intern");
+const Manager = require("./Develop/lib/Manager");
+
+const employee = [];
+
+function init() {
+    startingHTML();
+    addEmployee();
+}
+
+function addEmployee() {
+    inquirer.prompt([{
+        message: "Enter employee's name",
+        name: "name"
+    },
+    {
+        type: "list",
+        message: "Select employee's role",
+        choices: [
+            "Engineer",
+            "Intern",
+            "Manager"
+        ],
+        name: "role"
+    },
+    {
+        message: "Enter employee's id",
+        name: "id"
+    },
+    {
+        message: "Enter employee's email address",
+        name: "email"
+    }])
+
