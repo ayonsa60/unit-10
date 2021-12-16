@@ -18,9 +18,9 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Engineer = require("./Develop/lib/Engineer.js");
-const Intern = require("./Develop/lib/Intern");
-const Manager = require("./Develop/lib/Manager");
+const Engineer = require("./assets/lib/Engineer.js");
+const Intern = require("./assets/lib/Intern");
+const Manager = require("./assets/lib/Manager");
 
 const employee = [];
 
@@ -96,3 +96,12 @@ function addEmployee() {
         });
     });
 }
+
+function renderHtml(employeeArray) {
+    startingHTML();
+    for (const employee of employeeArray) {
+        addHtml(employee);
+    }
+    finalHTML();
+}
+init();

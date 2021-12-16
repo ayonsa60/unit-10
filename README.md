@@ -179,15 +179,3 @@ This Portfolio Piece is graded based on the following criteria:
 
 * Repository contains a high-quality readme with description and a link to a walkthrough video.
 
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video that demonstrates the functionality of the application and passing tests.
-
-* A sample HTML file generated using your application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
