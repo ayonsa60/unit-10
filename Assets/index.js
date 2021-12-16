@@ -52,4 +52,26 @@ function addEmployee() {
         message: "Enter employee's email address",
         name: "email"
     }])
-
+    .then(function({name, role, id, email}) {
+        let roleInfo = "";
+        if (role === "Engineer") {
+            roleInfo = "GitHub username";
+        } else if (role === "Intern") {
+            roleInfo = "school name";
+        } else {
+            roleInfo = "office phone number";
+        }
+        inquirer.prompt([{
+            message: `Enter employee's ${roleInfo}`,
+            name: "roleInfo"
+        },
+        {
+            type: "list",
+            message: "Would you like to add more employees?",
+            choices: [
+                "yes",
+                "no"
+            ],
+            name: "addingEmployee"
+        }])
+        
